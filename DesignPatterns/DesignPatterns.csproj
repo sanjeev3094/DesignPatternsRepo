@@ -68,6 +68,7 @@
     <Compile Include="6_CommandPattern\BasicVersion\Commands\CeilingFanOffCommand.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\LightOffCommand.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\LightOnCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\MacroCommand.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\NoCommand.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\RemoteControl.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\StereoOnWithCDCommand.cs" />

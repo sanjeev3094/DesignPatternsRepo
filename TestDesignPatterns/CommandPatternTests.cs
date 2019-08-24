@@ -1,4 +1,4 @@
-﻿using System;
+﻿using DesignPatterns.CommandPattern;
 using DesignPatterns.CommandPattern.BasicVersion;
 using DesignPatterns.CommandPattern.BasicVersion.Commands;
 using DesignPatterns.CommandPattern.HomeAutomationDevices;
@@ -10,7 +10,7 @@ namespace TestDesignPatterns
     public class CommandPatternTests
     {
         [TestMethod]
-        public void SimpleCommandPatternTestMethod1()
+        public void SimpleCommandPatternTestMethod()
         {
             RemoteControl remoteControl = new RemoteControl(totalSlots: 7);
 
@@ -31,6 +31,29 @@ namespace TestDesignPatterns
             remoteControl.OffButtonWasPushed(1);
 
             remoteControl.UndoButtonWasPressed();
+        }
+
+        [TestMethod]
+        public void MacroCommandTestMethod()
+        {
+            Light livingRoomLight = new Light("Living Room");
+            LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
+            LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+
+            CeilingFan livingRoomCeilingFan = new CeilingFan("Living Room");
+            CeilingFanHighCommand ceilingFanHighCommand = new CeilingFanHighCommand(livingRoomCeilingFan);
+            CeilingFanOffCommand ceilingFanOffCommand = new CeilingFanOffCommand(livingRoomCeilingFan);
+
+            ICommand[] study = { livingRoomLightOn, ceilingFanHighCommand };
+            ICommand[] stopStudy = { livingRoomLightOn, ceilingFanHighCommand };
+
+            MacroCommand studyMacro = new MacroCommand(study);
+            MacroCommand stopStudyMacro = new MacroCommand(stopStudy);
+
+            RemoteControl remoteControl = new RemoteControl(totalSlots: 1);
+            remoteControl.SetCommand(0, studyMacro, stopStudyMacro);
+
+            remoteControl.OnButtonWasPushed(0);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace TestDesignPatterns
     public class SingletonTests
     {
         [TestMethod]
-        public void SingletonTest1()
+        public void SingletonTest()
         {
             Singleton singleton1 = Singleton.Instance;
             Singleton singleton2 = Singleton.Instance;

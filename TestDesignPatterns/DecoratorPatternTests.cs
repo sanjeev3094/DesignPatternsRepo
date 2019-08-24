@@ -9,7 +9,7 @@ namespace TestDesignPatterns
     public class DecoratorPatternTests
     {
         [TestMethod]
-        public void DecoratorPatternTest1()
+        public void DecoratorPatternTest()
         {
             Beverage beverage = new Espresso(price: 2, description: nameof(Espresso));
             Mocha mocha = new Mocha(beverage, 1, nameof(Mocha));
