@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3843A9C7-C049-4B54-A79D-A51B340FF36D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1_Strategy\Behaviors\MuteQuack.cs" />
+    <Compile Include="1_Strategy\Behaviors\Quack.cs" />
+    <Compile Include="1_Strategy\Behaviors\Squeak.cs" />
+    <Compile Include="1_Strategy\Duck.cs" />
+    <Compile Include="1_Strategy\Behaviors\FlyNoWay.cs" />
+    <Compile Include="1_Strategy\Behaviors\FlyWithWings.cs" />
+    <Compile Include="1_Strategy\Behaviors\IFlyBehavior.cs" />
+    <Compile Include="1_Strategy\Behaviors\IQuackBehavior.cs" />
+    <Compile Include="1_Strategy\MallardDuck.cs" />
+    <Compile Include="1_Strategy\RubberDuck.cs" />
+    <Compile Include="2_Observer\Observable\IWeatherDataPublisher.cs" />
+    <Compile Include="2_Observer\Observable\WeatherData.cs" />
+    <Compile Include="2_Observer\Observable\WeatherDataArgs.cs" />
+    <Compile Include="2_Observer\Observable\WeatherStation.cs" />
+    <Compile Include="2_Observer\Observers\CurrentConditionDisplay.cs" />
+    <Compile Include="2_Observer\Observers\IDisplayElement.cs" />
+    <Compile Include="3_Decorator\Component\Beverage.cs" />
+    <Compile Include="3_Decorator\Component\Espresso.cs" />
+    <Compile Include="3_Decorator\Component\HouseBlend.cs" />
+    <Compile Include="3_Decorator\CondimentDecorator.cs" />
+    <Compile Include="3_Decorator\Mocha.cs" />
+    <Compile Include="5_Singleton\Singleton.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\CeilingFanCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\CeilingFanHighCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\CeilingFanOffCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\LightOffCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\LightOnCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\NoCommand.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\RemoteControl.cs" />
+    <Compile Include="6_CommandPattern\BasicVersion\Commands\StereoOnWithCDCommand.cs" />
+    <Compile Include="6_CommandPattern\HomeAutomationDevices\CeilingFan.cs" />
+    <Compile Include="6_CommandPattern\HomeAutomationDevices\Light.cs" />
+    <Compile Include="6_CommandPattern\HomeAutomationDevices\Stereo.cs" />
+    <Compile Include="6_CommandPattern\ICommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
