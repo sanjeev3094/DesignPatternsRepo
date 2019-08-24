@@ -3,6 +3,7 @@ using DesignPatterns.CommandPattern.BasicVersion;
 using DesignPatterns.CommandPattern.BasicVersion.Commands;
 using DesignPatterns.CommandPattern.HomeAutomationDevices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace TestDesignPatterns
 {
@@ -54,6 +55,28 @@ namespace TestDesignPatterns
             remoteControl.SetCommand(0, studyMacro, stopStudyMacro);
 
             remoteControl.OnButtonWasPushed(0);
+        }
+
+        [TestMethod]
+        public void RelayCommandPatternTestMethod()
+        {
+            RemoteControl remoteControl = new RemoteControl(totalSlots: 7);
+
+            Light livingRoomLight = new Light("Living Room");
+
+            Action lightOn = () => livingRoomLight.On();
+            Action lightOff = () => livingRoomLight.Off();
+            RelayCommand lightOnCmd = new RelayCommand(execute: lightOn,
+                undoExecute: lightOff);
+            RelayCommand lightOffCmd = new RelayCommand(execute: lightOff,
+                undoExecute: lightOn);
+
+            remoteControl.SetCommand(0, lightOnCmd, lightOffCmd);
+
+            remoteControl.OnButtonWasPushed(0);
+            remoteControl.OffButtonWasPushed(0);
+
+            remoteControl.UndoButtonWasPressed();
         }
     }
 }

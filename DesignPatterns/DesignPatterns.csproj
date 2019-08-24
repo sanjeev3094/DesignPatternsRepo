@@ -70,7 +70,8 @@
     <Compile Include="6_CommandPattern\BasicVersion\Commands\LightOnCommand.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\MacroCommand.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\NoCommand.cs" />
-    <Compile Include="6_CommandPattern\BasicVersion\RemoteControl.cs" />
+    <Compile Include="6_CommandPattern\RelayCommand.cs" />
+    <Compile Include="6_CommandPattern\RemoteControl.cs" />
     <Compile Include="6_CommandPattern\BasicVersion\Commands\StereoOnWithCDCommand.cs" />
     <Compile Include="6_CommandPattern\HomeAutomationDevices\CeilingFan.cs" />
     <Compile Include="6_CommandPattern\HomeAutomationDevices\Light.cs" />
