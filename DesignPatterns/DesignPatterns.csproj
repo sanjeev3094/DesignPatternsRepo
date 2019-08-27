@@ -77,6 +77,11 @@
     <Compile Include="6_CommandPattern\HomeAutomationDevices\Light.cs" />
     <Compile Include="6_CommandPattern\HomeAutomationDevices\Stereo.cs" />
     <Compile Include="6_CommandPattern\ICommand.cs" />
+    <Compile Include="7_AdapterAndFacade\IDuck.cs" />
+    <Compile Include="7_AdapterAndFacade\ITurkey.cs" />
+    <Compile Include="7_AdapterAndFacade\MallardDuck.cs" />
+    <Compile Include="7_AdapterAndFacade\TurkeyAdapter.cs" />
+    <Compile Include="7_AdapterAndFacade\WildTurkey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
