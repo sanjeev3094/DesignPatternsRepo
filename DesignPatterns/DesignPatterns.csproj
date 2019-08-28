@@ -82,8 +82,15 @@
     <Compile Include="7_AdapterAndFacade\MallardDuck.cs" />
     <Compile Include="7_AdapterAndFacade\TurkeyAdapter.cs" />
     <Compile Include="7_AdapterAndFacade\WildTurkey.cs" />
+    <Compile Include="8_TemplateMethodPattern\CaffeineBeverage.cs" />
+    <Compile Include="8_TemplateMethodPattern\CaffeineBeverageWithHook.cs" />
+    <Compile Include="8_TemplateMethodPattern\Coffee.cs" />
+    <Compile Include="8_TemplateMethodPattern\CoffeeWithHook.cs" />
+    <Compile Include="8_TemplateMethodPattern\Tea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="10_StatePattern\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
