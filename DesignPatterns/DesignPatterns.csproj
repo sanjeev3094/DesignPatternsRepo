@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="10_StatePattern\GumballMachine.cs" />
+    <Compile Include="10_StatePattern\States\HasQuaterState.cs" />
+    <Compile Include="10_StatePattern\States\IState.cs" />
+    <Compile Include="10_StatePattern\States\NoQuaterState.cs" />
+    <Compile Include="10_StatePattern\States\SoldOutState.cs" />
+    <Compile Include="10_StatePattern\States\SoldState.cs" />
     <Compile Include="1_Strategy\Behaviors\MuteQuack.cs" />
     <Compile Include="1_Strategy\Behaviors\Quack.cs" />
     <Compile Include="1_Strategy\Behaviors\Squeak.cs" />
@@ -89,8 +95,6 @@
     <Compile Include="8_TemplateMethodPattern\Tea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="10_StatePattern\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
